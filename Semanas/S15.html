@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC >
+<html lang="es">
+
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams" /* this part is for numbered equations */
+        }
+      };
+    </script>
+
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+        body.number-title{
+          counter-reset: sectionCounter 14 cardCounter ;
+        }
+        h1.number-title{
+          counter-reset: sectionCounter 14 cardCounter ;
+        }
+      </style>
+  
+
+    <!-- Top Menu  -->
+
+
+    <header class="main-header">
+        <h1> Programación UNO</h1>
+        <nav class="top-nav">
+          <ul>
+            <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Home.html"> Inicio  </a> </li>
+          <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Informacion_General.html"> Información general </a> </li>
+          <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Notas.html"> Notas </a> </li>
+          <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Ejercicios.html"> Ejercicios </a> </li>
+          <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Enlaces_externos.html"> Links </a> </li>
+          </ul>
+        </nav>
+
+      <!-- 
+        <nav class="small-nav" align=right>
+          <button onclick="myFunction()">Claro/Obscuro 
+        </nav> 
+      -->
+
+      </header>
+
+      <!-- This part is for title in tab-->
+      <title> Semana 15   </title>
+    
+  </head>
+
+
+
+  <body class="fondo-body" >
+    
+    <h1 class="number-title flexbox"> Semana 15 </h1>   
+
+    <h1 class="title flexbox_"></h1>
+
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Generar aleatoriamente una matriz de tamaño $3 \times 3$ con números enteros entre $0$ y $9$, 
+        Escribir el pseudocodigo de un algoritmo que imprima la matriz generada y calcule e imprima
+        la matriz transpuesta correspondiente.
+      </p>
+      <button class="respButton hvr-grow ">  Solución       </button>
+    <div class="resp-box flexbox">
+      <div class="flexbox">  
+        <a href="../Ejercicios/Practica15_1.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Generar aleatoriamente dos  matrices de tamaño $3 \times 3$ con números enteros entre $0$ y $9$, 
+        Escribir el pseudocodigo de un algoritmo que imprima las matrices generadas, luego  calcule e imprima la  matriz que resulta de  sumar 
+        estas matrices.
+      </p>
+
+      <p><b>Hint:</b> Si $A=(A_{ij})_{0\leq i,j \leq 2}$ y $B=(B_{ij})_{0\leq i,j \leq 2}$, entonces 
+        $$A+B=\left( (A+B)_{ij} \right)_{0\leq i,j \leq 2}$$
+        donde $(A + B)_{ij}:= A_{ij} + B_{ij}$ 
+      </p>
+      <button class="respButton hvr-grow ">  Solución       </button>
+    <div class="resp-box flexbox">
+      <div class="flexbox">  
+        <a href="../Ejercicios/Practica15_3.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+      </div>
+    </div>
+
+    </div>
+
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Generar aleatoriamente dos  matrices de tamaño $3 \times 3$ con números enteros entre $0$ y $9$, 
+        Escribir el pseudocodigo de un algoritmo que imprima las matrices generadas, luego calcule e imprima
+        la matriz que resulta de multiplicar estas matrices.
+      </p>
+      <p><b>Hint:</b> Si $A=(A_{ij})_{0\leq i,j \leq 2}$ y $B=(B_{ij})_{0\leq i,j \leq 2}$, entonces 
+        $$AB = \left( (AB)_{ij}\right)_{0\leq i,j \leq 2}$$
+        donde $(AB)_{ij}:= \displaystyle{\sum_{k=0}^{2} } A_{ik}B_{kj} $
+      </p>
+      <button class="respButton hvr-grow ">  Solución       </button>
+    <div class="resp-box flexbox">
+      <div class="flexbox">  
+        <a href="../Ejercicios/" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+      </div>
+    </div>
+    </div>
+
+
+      
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Generar aleatoriamente una matriz de tamaño $2 \times 2$ con números enteros entre $-2$ y $2$, 
+        Escribir el pseudocodigo de un algoritmo que imprima la matriz generada, luego determine si la matriz generada 
+        es simétrica o antisimétrica. 
+      </p>
+      <p><b>Recuerda:</b> Una matriz $A$ es simétrica si $A=A^{t}$ y es antisimétrica si $A= - A^{t}$ </p>
+    </div>
+
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Generar aleatoriamente una matriz de tamaño $3 \times3 $ con números enteros entre $0$ y $9$, 
+        Escribir el pseudocodigo de un algoritmo que imprima la matriz generada, luego determine si la matriz generada 
+        es una matriz triangular superior o triangular inferior. 
+      </p>
+      <p><b>Recuerda:</b> Una matriz $A=(a_{ij})$ es triangular superior si $a_{ij}=0$ para todo  $i > j $ y 
+        es triangular inferior si $a_{ij}=0$ para todo  $i < j $
+      </p>
+    </div>
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Juego del ahorcado (.. ya agrego las instrucciones..)
+      </p>
+      <button class="respButton hvr-grow ">  Solución Omar       </button>
+    <div class="resp-box flexbox">
+      <div class="flexbox">  
+        <a href="../Ejercicios/Ahorcado_dibujo.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+      </div>
+    </div>
+<br>
+    <button class="respButton hvr-grow ">  Solución     </button>
+    <div class="resp-box flexbox">
+      <div class="flexbox">  
+        <a href="../Ejercicios/Ahorcado.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+      </div>
+    </div>
+
+    </div>
+
+    
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Programa para formar equipos</p>
+      <button class="respButton hvr-grow "> Solución </button>
+    <div class="resp-box flexbox">
+      <div class="flexbox">  
+        <a href="../Ejercicios/Equipos.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+      </div>
+    </div>
+
+    </div>
+  </body>

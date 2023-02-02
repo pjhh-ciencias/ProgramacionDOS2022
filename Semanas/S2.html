@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+
+
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams" /* this part is for numbered equations */
+        }
+      };
+    </script>
+
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+        body.number-title{
+          counter-reset: sectionCounter 1 cardCounter ;
+        }
+        h1.number-title{
+          counter-reset: sectionCounter 1 cardCounter ;
+        }
+      </style>
+  
+    <!-- Top Menu  -->
+
+
+    <header class="main-header">
+        <h1> Programación UNO</h1>
+       <nav class="top-nav">
+        <ul>
+          <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Home.html"> Inicio  </a> </li>
+        <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Informacion_General.html"> Información general </a> </li>
+        <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Notas.html"> Notas </a> </li>
+        <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Ejercicios.html"> Ejercicios </a> </li>
+        <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Enlaces_externos.html"> Links </a> </li>
+        </ul>
+
+       </nav>
+       <!-- 
+        <nav class="small-nav" align=right>
+          <button onclick="myFunction()">Claro/Obscuro 
+        </nav> 
+      -->
+
+      </header>
+
+      <!-- This part is for title in tab-->
+      <title> Semana 2   </title>
+    
+  </head>
+
+
+
+  <body class="fondo-body" >
+    <h1 class="number-title flexbox"> Semana 2 </h1>   
+  
+<div class="nota-box">
+   
+<h2 class="number-title"> Diagramas de flujo</h2>
+
+
+<p>
+  Un <em>diagrama de flujo</em> es la representación gráfica mediante símbolos especiales, de los pasos o procedimientos de
+   manera secuencial y lógica que se deben realizar para solucionar  un problema específico.
+</p>
+
+
+  
+  <p>Los <em>diagramas de flujo</em> facilitan la comunicación entre los programadores y los usuarios,
+    además de que permiten de una manera más rápida  detectar los posibles errores de lógica 
+    que se presenten al implementar el algoritmo. <b>Su correcta construcción es sumamente importante 
+    porque a partir del mismo se escribe un <em>programa</em> en algún <em>lenguaje de programación</em></b>.
+    Si el diagrama  de flujo está completo y correcto, el paso del mismo a un <em>lenguaje de programación</em>
+    es relativamente simple y directo.
+  </p>
+
+<p><b><u>Definición:</u></b> Un <b>diagrama de flujo</b> es una representación gráfica de un algoritmo. Los símbolos utilizados
+   satisfacen las recomendaciones de la <em>International Organization for Standardization</em> (ISO) y el American National
+   Standards Institute (ANSI).
+  </p>
+
+<!--
+<p>
+    <div class="flexbox">
+        <img src="../Imagenes/Simbolos_diagramas_flujo" alt="", width="auto" height="auto">
+    </div>
+</p>
+
+
+
+<p>
+  <div class="flexbox">
+      <img src="../Imagenes/Simbolos_diagramas_flujo" alt="", width="auto" height="auto">
+  </div>
+</p>
+
+<p><b><u>Ejemplo:</u></b> El diagrama de flujo para determinar el volumen de una caja de dimensiones A, 
+  B y C </p>
+
+<p>
+  <div class="flexbox">
+      <img src="../Imagenes/Simbolos_diagramas_flujo" alt="", width="auto" height="auto">
+  </div>
+</p>
+
+
+  <p>
+  Se puede ver gráficamente, de forma precisa la secuencia de los pasos por realizar
+  para obtener el resultado del volumen. Como se puede verificar, son los mismos pasos
+  que se establecieron en el algoritmo presentado previamente mediante el pseudocódigo
+  </p>
+
+  <p>
+  Dentro de los diagramas de flujo se pueden utilizar los símbolos que 
+  se presentan en la siguiente tabla, con los cuales se indican las operaciones que se 
+  efectuarán a los datos con el fin de producir un resultado.
+</p>
+
+-->
+
+
+<p>Enseguida se muestran algunos de los principales símbolos 
+  utilizados para construir un diagrama de flujo.
+</p>
+
+
+
+<p>        
+  <table class="info">
+    
+    <caption><b><font size="4">Símbolos utilizados en los diagramas de flujo</font></b></caption>
+    <thead>
+    <tr>
+      <th>Símbolo</th>
+      <th> Descripcion del símbolo</th>
+    </tr>
+    </thead>
+      <tbody>
+      <tr>
+        <td><img src="../Imagenes/Simbolo_inicio_fin.JPG" alt="", width="auto" height="auto"></td>
+        <td> Se utiliza para marcar el <b>inicio</b> y el <b>fin</b> del diagrama de flujo.</td>
+      </tr>
+
+      <tr>
+        <td><img src="../Imagenes/Simbolo_lectura.JPG" alt="", width="auto" height="auto"></td>
+        <td>Se utiliza para introducir los datos de entrada. Expresa <b>lectura</b>.</td>
+      </tr>
+
+      <tr>
+        <td><img src="../Imagenes/Simbolo_proceso.JPG" alt="", width="auto" height="auto"></td>
+        <td>Representa un <b>proceso</b>. En su interior se colocan asignaciones,
+          operaciones aritméticas, cambios de valor de celdas en memoria,
+          etc.</td>
+      </tr>
+
+      <tr>
+        <td><img src="../Imagenes/Simbolo_decision.JPG" alt="", width="auto" height="auto"></td>
+        <td>Se utiliza para representar una <b>decisión</b>. En su interior se almacena
+          una condición, y, dependiendo del resultado, se sigue por
+          una de las ramas o caminos alternativos. Este símbolo se utiliza
+          con pequeñas variaciones en las estructuras selectivas</td>
+      </tr>
+
+      <tr>
+        <td><img src="../Imagenes/Simbolo_decision_multiple.JPG" alt="", width="auto" height="auto"></td>
+        <td>Se utiliza para representar una <b>decisión múltiple</b>. En su interior se almacena
+          un selector, y, dependiendo del valor de dicho selector, se
+          sigue por una de las ramas o caminos alternativos.</td>
+      </tr>
+
+      <tr>
+        <td><img src="../Imagenes/Sibolo_escritura.JPG" alt="", width="auto" height="auto"></td>
+        <td>Se utiliza para representar la impresión de un resultado. Expresa
+          <b>escritura</b>.</td>
+      </tr>
+
+      <tr>
+        <td><img src="../Imagenes/Simbolo_direccion_flujo.JPG" alt="", width="auto" height="auto"></td>
+        <td>Expresan la <b>dirección</b> del flujo del diagrama.</td>
+      </tr>
+
+      <tr>
+        <td><img src="../Imagenes/Conexion_misma_pagina.JPG" alt="", width="auto" height="auto"></td>
+        <td>Expresa <b>conexión</b> dentro de una misma página.</td>
+      </tr>
+
+      <tr>
+        <td><img src="../Imagenes/Conexion_diferente_pagina.JPG" alt="", width="auto" height="auto"></td>
+        <td>Representa <b>conexión</b> entre páginas diferentes.</td>
+      </tr>
+
+      <tr> <td><img src="../Imagenes/Simbolo_subproblema.JPG" alt="", width="auto" height="auto"></td>
+        <td>Se utiliza para expresar un módulo de un problema, <b>subproblema</b>,
+          que hay que resolver antes de continuar con el flujo
+          normal del diagrama.</td>
+      </tr>
+    </tbody>
+    </table>
+  </p>
+
+ <h2 class="number-title"> Construcción de un diagrama de flujo</h2>
+  <p>En la siguiente figura se presentan los pasos que se deben seguir en la
+    construcción de un diagrama de flujo. El <b>procesamiento de los datos</b> generalmente
+    está relacionado con el <b>proceso de toma de decisiones</b>. Además, es muy común
+    <b>repetir un conjunto de pasos</b>.
+  </p>
+  
+    
+  <p>
+    <div class="flexbox">
+        <img src="../Imagenes/Etapas_construccion_diagrama_flujo.JPG" alt="", width="auto" height="auto">
+    </div>
+  </p>
+
+<h2 class="number-title"> Reglas para la construcción
+  de diagramas de flujo</h2>
+ 
+
+   <p>El diagrama de flujo debe ilustrar gráficamente los pasos o procesos que se deben
+      seguir para alcanzar la solución de un problema.
+    </p>
+
+    <p>Los símbolos presentados, colocados en los lugares adecuados, permiten crear una <b>estructura gráfica flexible
+      que ilustra los pasos a seguir para alcanzar un resultado específico</b>. El diagrama
+      de flujo facilita entonces la escritura del programa en un lenguaje de programación.
+    </p>
+    <p>
+     A continuación se presenta algunas reglas que debemos seguir en la <b>construcción de  diagramas de flujo</b>:
+    </p>
+    
+  <p>
+    <ol>
+      <li>Todo diagrama de flujo debe tener un inicio y un fin.</li>
+      <li>Las líneas utilizadas para indicar la dirección del flujo del diagrama deben
+        ser rectas:<i> verticales u horizontales</i></li>
+      <li>Todas las líneas utilizadas para indicar la dirección del flujo del diagrama
+        deben estar conectadas. La conexión puede ser a un símbolo que exprese
+        lectura, proceso, decisión, impresión, conexión o fin del diagrama.</li>
+      <li>El diagrama de flujo debe construirse de arriba hacia abajo (top-down). <!--  y  de ser posible de 
+        izquierda a derecha (right to left).--></li>
+      <li>La notación utilizada en el diagrama de flujo debe ser independiente del
+        lenguaje de programación. La solución presentada se puede escribir posteriormente
+        en diferentes lenguajes de programación.</li>
+      <li>Al realizar una tarea compleja, es conveniente poner comentarios que
+        expresen o ayuden a entender lo que hayamos hecho.</li>
+      <li>Si la construcción del diagrama de flujo requiriera más de una hoja,
+        debemos utilizar los conectores adecuados y enumerar las páginas
+        correspondientes.</li>
+      <li>No puede llegar más de una línea a un símbolo determinado.</li>
+    </ol>
+  </p>
+
+
+
+
+  <p>Presentaremos a continuación algunos conceptos que son fundamentales para la
+    construcción de algoritmos, diagramas de flujo y programas. Primero analizaremos
+    los <em>tipos de datos</em>, luego estudiaremos los conceptos de <em>identificador, constantes
+    y variables</em>, más adelante analizaremos las <em>operaciones aritméticas</em> y
+    <em>expresiones lógicas</em>.</p>
+    
+ 
+    <h2 class="number-title"> Tipos de dato: simples y estructurados </h2>
+
+    <p>Los datos a procesar por una computadora pueden clasificarse en <b>simples</b> y <b>estructurados</b>.</p>
+   
+    <p><b><u>Definición.</u></b> Los <b>datos simples</b> son aquellos  que ocupan sólo una casilla de memoria, por lo tanto, una variable simple
+      hace referencia a un único valor a la vez. Dentro de este grupo de datos se encuentran: <b>enteros</b>, <b>reales</b>,
+     <b>caracteres</b> y <b>booleanos</b>
+     </p>
+  
+     
+    <p><b><u>Definición.</u></b> Los <b>datos estructurados</b> se caracterizan por el hecho de que con un nombre
+      (<b><em>identificador de variable estructurada</em></b>) se hace referencia a un grupo de casillas
+      de memoria. Es decir, un dato estructurado tiene varios componentes. Cada uno de los
+      componentes puede ser a su vez un dato simple o estructurado. Sin embargo, los
+      componentes básicos (los del nivel más bajo) de cualquier tipo estructurado son datos
+      simples. Dentro de este grupo de datos se encuentran:  <b>cadena de caracteres</b> y los <b>arreglos</b>.
+    </p>
+  
+  
+    <h2 class="number-title"> Datos númericos</h2>
+  
+    <p>Dentro de los tipos de dato númerico  se encuentran los <b><em>enteros</em></b> y los <b><em>reales</em></b>.
+      Los enteros son números que pueden estar precedidos del signo $+$ o $-$  y que no tienen parte decimal.
+      Mientras que los  reales son números que pueden estar precedidos del signo $+$ o $-$, y que tiene una parte 
+      decimal.</p>
+    <hr>
+    <p><b><u>Ejemplo.</u></b> Los siguientes son ejemplos de datos de tipo <i><b>entero</b></i>: 
+      $$1,-10,152,456,-895,-7613,0$$
+    </p>
+    <hr>
+  
+    <hr>
+    <p><b><u>Ejemplo.</u></b> Los siguientes son ejemplos de datos de tipo <i><b>real</b></i>: 
+      $$0.5,-1.8,1.52,9.4,-8.57,-2.2,0.99$$
+    </p>
+    <hr>
+  
+  
+    <h2 class="number-title"> Datos alfanúmericos</h2>
+  
+    <p>Dentro de este tipo de datos encontramos los de <b><em>tipo caracter</em></b> (simple) y <b><em>cadena de caracteres</em></b> (estructurado).
+       Son datos cuyo contenido pueden ser letras del abecededario ($a,b,c, \ldots, x,y,z$) , digitos ($0,1,2,\ldots,9$) o 
+       símbolos especiales (#, $, ^, *, %, /, !, +, -, ...,etc) 
+    </p>
+  
+    <p><b><u>Observación:</u></b> Aunque este  tipo de datos pueden contener números, no pueden ser utilizados para 
+      realizar operaciones aritméticas </p>
+  
+      
+    <p>Un dato de tipo <b>caracter</b> contiene un sólo caracter, y se escribe entre <b><em>comillas simples</em></b>. Un dato tipo 
+      <b>cadena de caracteres</b> contiene un conjunto de caracteres, y se escribe entre <b><em>comillas.</em></b></p>
+  
+    <hr>
+    <p><b><u>Ejemplo.</u></b> Son ejemplos de datos de tipo <i><b>caracter</b></i>: 
+      <center><pre>'a'    'P'   '$'   '5'   '-'   '#'   'H'</pre></center>
+    </p>
+    <hr>
+  
+    <hr>
+    <p><b><u>Ejemplo.</u></b> Los siguientes son ejemplos de datos de tipo <i><b>cadena de caracteres</b></i>:
+    <center><pre>"aeiou"    "#50"   "$100A"   "Actuaria"   "UMAR"   "951-590-75-00"   "ECONOMIA"</pre></center>
+    </p>
+      <hr>
+  
+      <h2 class="number-title"> Datos lógicos</h2>
+      <p>En este tipo de de datos se encuentran los <b>booleanos</b>. Son datos que solo pueden tomar dos valores: 
+      <b>Verdadero</b> (<b>True</b>) o <b>Falso</b> (<b>false</b>)</p>
+
+      <h2 class="number-title"> Identificadores, constantes y variables</h2>
+
+      <p>Los datos a procesar por una computadora, ya sean simples o estructurados, se deben almacenar en casillas 
+         o celdas de memoria para su posterior utilización. Estas casillas o celdas de memoria (ya sean constantes o variables)
+        tienen un nombre que permite su ubicación.
+      </p>
+  
+  
+      <p><b><u>Definición.</u></b> Se le llama <b>identificador</b> al nombre que se les da a las casillas o celdas de memoria. 
+       Existen muchas recomendaciones respecto a las  reglas (<b>dependen del lenguaje de programacion 
+      que se este utilizando</b>) para definir un identificador, por ejemplo:
+      <ul>
+        <li>El primer caracter que forma un identificador debe ser una letra del abecedario ($a,b,c,\ldots,x,y,z$)</li>
+        <li>Los demás caracteres pueden ser letras  (a,b,c,...,x,y,z), digitos (0,1,2,...,9) o el simbolo especial: _</li>
+        <li>En algunos lenguajes de programación el identificador esta limitado a   una longitud máxima.</li>
+      </ul>
+      </p>
+  
+      <p><b><u>Definición.</u></b> Las <b>constantes</b> son datos que no cambian durante la ejecución de un <em>programa</em>
+      Para nombrar las constantes utilizamos los identificadores que mencionamos anteriormente. Existen tipos de constantes 
+      como  tipos de datos, por lo tanto puede haber constantes de tipo entero, real, caracter, cadena de caracteres, etc.   </p>
+  
+  
+      <p><b><u>Definición.</u></b>  Las <b>variables</b> son objetos que pueden cambiar su valor durante la ejecución de un programa. 
+      Par nombrar las variables utilizaremos los identificadores que se abordaron anteriormente. Al igual que las constantes, pueden 
+      existir tipos de variables como tipos de datos. Las más comunes son las  variables de tipo entero y real.
+  
+      <p><b><u>Observación.</u></b> Es importante que los nombres de las constantes y las variables  sean representativas de la función 
+      que tienen las mismas en el programa.</p>
+
+      
+     <h2 class="number-title"> Operaciones aritméticas</h2>
+
+      <p>Para poder realizar <b>operaciones aritméticas</b> necesitamos de <b>operadores aritméticos</b>. Estos operadores nos 
+        permitirán realizar operaciones aritméticas entre operandos: números, constantes o variables.  El resultado de una
+        operación aritmética  será un número.  
+      </p>
+  
+      <p>En la siguiente tabla presentamos los operadores aritméticos, la operación que pueden realizar, un ejemplo de su uso y el 
+      resultado de dicho ejemplo. 
+      </p>
+      
+      <center>        
+        <table class="info"  style="width:60%">
+          
+        <caption><b><font size="4">Operadores aritméticos</font></b></caption>
+          <thead>
+          <tr>
+            <th style="width:170px">Operador aritmético</th>
+            <th style="width:130px">Operación</th>
+            <th>Ejemplo</th>
+            <th>Resultado</th>
+          </tr>
+          </thead>
+            <tbody>
+            <tr >
+              <td><center><b>**, ^</b></center></td>
+              <td>Potencia</td>
+              <td>4**3</td>
+              <td>64</td>
+            </tr>
+  
+            <tr>
+              <td><center><b>*</b></center></td>
+              <td>Multiplicación</td>
+              <td>1.25*2</td>
+              <td>2.5</td>
+            </tr>
+  
+            <tr>
+              <td><center><b>/</b></center></td>
+              <td>División</td>
+              <td>15/4</td>
+              <td>3.75</td>
+            </tr>
+  
+            <tr>
+              <td><center><b>+</b></center></td>
+              <td>Suma</td>
+              <td>20.5+9.2</td>
+              <td>29.7</td>
+            </tr>
+  
+            <tr>
+              <td><center><b>-</b></center></td>
+              <td>Resta</td>
+              <td>17.9-14.6</td>
+              <td>3.3</td>
+            </tr>
+  
+            <tr>
+              <td><center><b>MOD</b></center></td>
+              <td>Módulo (residuo)</td>
+              <td>15 MOD 2</td>
+              <td>1</td>
+            </tr>
+  
+            <tr>
+              <td><center><b>DIV</b></center></td>
+              <td>División entera</td>
+              <td>17 DIV 3</td>
+              <td>5</td>
+            </tr>
+  
+          </tbody>
+          </table>
+        </center>
+      
+    <p>Al evaluar expresiones que contienen operadores aritméticos debemos respetar la <b>jerarquía en el orden de aplicación de los operadores</b>. 
+      Esto es, si tenemos en una expresión más de un operador, debemos aplicar primero el operador de mayor jerarquía, resolver esa operación y 
+      así sucesivamente. Es importante señalar que el operador $( )$ es un <b>operador asociativo</b> que tiene la priopridad más alta en
+      cualquier lenguaje  de programación. 
+    </p>
+  
+    <p>En la siguiente tabla se presenta la jerarquía de los operadores aritméticos:</p>
+  
+    <center>        
+      <table class="info"  style="width:70%">
+        <caption><b><font size="4">Jerarquía de los operadores aritméticos</font></b></caption>
+        <thead>
+        <tr>
+          <th style="width:130px">Operador</th>
+          <th>Jerarquía</th>
+          <th>Operación</th>
+        </tr>
+        </thead>
+          <tbody>
+          <tr >
+            <td><center><b>**, ^</b></center></td>
+            <td rowspan="3"><center>Mayor <br> <font size="8"> &darr;</font> <br> Menor</center></td>
+            <td>Potencia</td>
+          </tr>
+  
+          <tr>
+            <td><center><b>*, /, MOD, DIV</b></center></td>
+            <td>Multiplicación, división, módulo, división entera </td>
+          </tr>
+  
+          <tr>
+            <td><center><b>+, -</b></center></td>
+            <td>Suma, resta</td>
+          </tr>
+  
+        </tbody>
+        </table>
+      </center>
+  
+  
+      <p>Las reglas para resolver una expresión aritmética son:
+      <ol>
+        <li>Si una expresión contiene <b>subexpresiones entre paréntesis</b>, éstas se evalúan 
+          primero; respetando claro está la jerarquía de los operadores aritméticos en 
+          esta subexpresión. Si las subexpresiones se encuentran anidadas por paréntesis, 
+          primero se evalúan las subexpresiones que se encuentran en el último nivel de anidamiento.
+          </li>
+        <li>Los operadores aritméticos se aplican teniendo en cuenta la jerarquía y de 
+          izquierda a derecha.</li>
+      </ol>
+  
+      </p>
+  
+      <h2 class="number-title"> Expresiones lógicas</h2>
+  
+      <p>Las <b><em>expresiones lógicas</em></b> o <b><em>booleanas</em></b>, llamadas así en honor del
+        matemático  <b><em>George Boole</em></b>, están constituidas por números, constantes o variables y <b>operadores
+        lógicos</b> o  <b>relacionales</b>. El valor que pueden tomar estas expresiones es el de  verdadero o falso.
+        Se utilizan frecuentemente en las <b><em>estructuras selectivas</em></b> (dependiendo del resultado de la evaluación
+        se toma por un determinado camino alternativo) y en las <b><em>estructuras repetitivas</em></b> (dependiendo del
+        resultado de la evaluación se continúa con el ciclo o se interrumpe al mismo).
+        </p>
+  
+     
+        <h2 class="number-title"> Operadores relacionales</h2>
+  
+        <p>
+          Los <b>operadores relacionales</b> son operadores que permiten <b>comparar dos operandos</b>. Los operandos pueden 
+          ser números, alfanuméricos, constantes o variables. Las constantes o variables, a su vez, pueden ser
+          de tipo entero, real, caracter o cadena de caracteres. <b>El resultado de una expresión con operadores 
+          relacionales es verdadero o falso.</b>
+        </p>
+    
+        <p>
+          En la tabla siguiente presentamos los operadores relacionales, la operación que pueden realizar, un
+          ejemplo de su uso y el resultado de dicho ejemplo.
+        </p>
+    
+         
+        <center>        
+          <table class="info"  style="width:60%">
+            
+        <caption><b><font size="4">Operadores relacionales</font></b></caption>
+            <thead>
+            <tr>
+              <th style="width:170px">Operador relacional</th>
+              <th style="width:130px">Operación</th>
+              <th>Ejemplo</th>
+              <th>Resultado</th>
+            </tr>
+            </thead>
+              <tbody>
+              <tr >
+                <td><center><b>=</b></center></td>
+                <td>Igual que</td>
+                <td>"Pablo"="pablo"</td>
+                <td>Falso</td>
+              </tr>
+    
+              <tr>
+                <td><center><b><></b></center></td>
+                <td>Distinto</td>
+                <td>'a'<>'A'</td>
+                <td>Verdadero</td>
+              </tr>
+    
+              <tr>
+                <td><center><b>< </b></center></td>
+                <td>Menor que </td>
+                <td>7 < 15</td>
+                <td>Verdadero</td>
+              </tr>
+    
+              <tr>
+                <td><center><b>></b></center></td>
+                <td>Mayor que</td>
+                <td>22>10</td>
+                <td>Verdadero</td>
+              </tr>
+    
+              <tr>
+                <td><center><b><=</b></center></td>
+                <td>Menor o igual que </td>
+                <td>20 <=50</td>
+                <td>Verdadero</td>
+              </tr>
+    
+              <tr>
+                <td><center><b>>=</b></center></td>
+                <td>Mayor o igual que </td>
+                <td>2>=1</td>
+                <td>Verdadero</td>
+              </tr>
+    
+              
+    
+            </tbody>
+            </table>
+          </center>
+  
+    <h2 class="number-title"> Operadores lógicos</h2>
+    
+    <p>Los <b>operadores lógicos</b> son operadores que permiten formular condiciones complejas a partir
+       de condiciones simples. Los operadores lógicos son de <b>conjunción</b> ( <b>Y</b>), <b>disyunción</b> (<b>O</b>) y <b>negación</b> (<b>NO</b>).
+    </p>
+  
+    <p>
+      En la siguiente tabla  presentamos el operador lógico, la expresión lógica y significado de dicha
+       expresión, teniendo en cuenta la <b>jerarquía correspondiente</b>.
+    </p>
+  
+  
+    
+    <center>        
+      <table class="info"  style="width:70%">
+        <caption><b><font size="4">Jerarquía de los operadores aritméticos</font></b></caption>
+        <thead>
+        <tr>
+          <th style="width:130px">Operador lógico</th>
+          <th>Jerarquía</th>
+          <th>Expresón lógica</th>
+          <th>Significado</th>
+        </tr>
+        </thead>
+          <tbody>
+          <tr >
+            <td><center><b>NO</b></center></td>
+            <td rowspan="3"><center>Mayor <br><br> <font size="10"> &darr;</font> <br><br> Menor</center></td>
+            <td><center>No P</center></td>
+            <td><center>No es cierto que P<br>
+          Es FALSO que P</center></td>
+          </tr>
+  
+          <tr>
+            <td><center><b>Y</b></center></td>
+            <td><center>P Y Q</center> </td>
+            <td><center>P ^ Q </center>  
+          </tr>
+  
+          <tr>
+            <td><center><b>O</b></center></td>
+            <td><center>P O Q</center></td>
+            <td><center>P o Q<br>
+               o  P o Q o ambas</center></td>
+            
+          </tr>
+  
+        </tbody>
+        </table>
+      </center>
+  
+      <p>A continuación presentamos la <b>tabla de verdad de los operadores lógicos:</b></p>
+  
+  
+         
+      <center>        
+        <table class="info"  style="width:60%">
+          
+      <caption><b><font size="4">Tabla de verdad de los operadores lógicos</font></b></caption>
+          <thead>
+          <tr>
+            <th style="width:170px"><center><b>P</b></center></th>
+            <th style="width:130px"><center><b>Q</b></center></th>
+            <th style="width:130px"><center><b>No P</b></center></th>
+            <th style="width:130px"><center><b>No Q</b></center></th>
+            <th style="width:130px"><center><b>P Y Q</b></center></th>
+            <th style="width:130px"><center><b>P O Q</b></center></th>
+          </tr>
+          </thead>
+            <tbody>
+            <tr >
+              <td><center>VERDADERO</center></td>
+              <td><center>VERDADERO</center></td>
+              <td><center>FALSO</center></td>
+              <td><center>FALSO</center></td>
+              <td><center>VERDADERO</center></td>
+              <td><center>VERDADERO</center></td>
+            </tr>
+  
+            <tr>
+              <td><center>VERDADERO</center></td>
+              <td><center>FALSO</center></td>
+              <td><center>FALSO</center></td>
+              <td><center>VERDADERO</center></td>
+              <td><center>FALSO</center></td>
+              <td><center>VERDADERO</center></td>
+            </tr>
+  
+            <tr>
+              <td><center>FALSO</center></td>
+              <td><center>VERDADERO</center></td>
+              <td><center>VERDADERO</center></td>
+              <td><center>FALSO</center></td>
+              <td><center>FALSO</center></td>
+              <td><center>VERDADERO</center></td>
+            </tr>
+  
+            <tr>
+              <td><center>FALSO</center></td>
+              <td><center>FALSO</center></td>
+              <td><center>VERDADERO</center></td>
+              <td><center>VERDADERO</center></td>
+              <td><center>FALSO</center></td>
+              <td><center>FALSO</center></td>
+            </tr>
+  
+            
+          </tbody>
+          </table>
+        </center>
+  
+  
+      <p>Finalmente presentamos la jerarquía correspondiente de todos los operadores (aritméticos, 
+        relaciónales y lógicos)</p>
+        
+  
+        
+    
+    <center>        
+      <table class="info"  style="width:70%">
+        <caption><b><font size="4">Jerarquía de los operadores </font></b></caption>
+        <thead>
+        <tr>
+          <th style="width:130px">Operador lógico</th>
+          <th>Jerarquía</th>
+        </tr>
+        </thead>
+          <tbody>
+          <tr >
+            <td><center><b>()</b></center></td>
+            <td rowspan="7"><center>Mayor <br><br> <font size="12"> &darr;</font> <br><br> Menor</center></td>
+          </tr>
+  
+          <tr>
+            <td><center><b>**</b></center></td>
+          </tr>
+  
+          <tr>
+            <td><center><b>*, /, modulo, div</b></center></td>
+          </tr>
+  
+          <tr>
+            <td><center><b>=, <>, <, >, <=, >=</b></center></td>
+          </tr>
+          
+          <tr>
+            <td><center><b>No</b></center></td>
+          </tr>
+  
+          <tr>
+            <td><center><b>Y</b></center></td>
+          </tr>
+  
+          <tr>
+            <td><center><b>O</b></center></td>
+          </tr>
+  
+        </tbody>
+        </table>
+      </center>
+  
+  
+      
+  <HR>
+      <p><b><u>Observaciones:</u></b>
+        <ol>
+          <li>El operador $()$ es un operador asociativo que tiene la prioridad más
+            alta en  cualquier lenguaje de programación. Por otra parte, debemos señalar que en  ciertos lenguajes,
+            las prioridades de los operadores se manejan en forma diferente. Por ejemplo, el operador lógico 
+            de negación no en el lenguaje de  programación C tiene la prioridad más alta después del operador 
+            asociativo.</li>
+          <li>  No se puede realizar la comparación entre un valor lógico y un numérico, 
+            utilizando un operador relacionales
+          </li>
+        </ol>
+  
+        </p>
+        <HR>
+          <h2 class="number-title"> Bloque de asignación</h2>
+
+          <p>Un <b>bloque de asignación</b> se utiliza para asignar valores o expresiones a una variable.
+            La asignación es una <b>operación destructiva</b>. Esto significa que si la variable
+            tenía asignado un valor, éste se destruye, conservando ahora el nuevo valor. El
+            formato de la asignación es el siguiente:
+          </p>
+
+          <p>
+          <center><b>Variable <font size=5>&#8592;</font> Expresión o valor</b></center><br>
+          Donde: expresión puede ser aritmética o lógica, o una constante o variable.
+          </p>
+
+
+</div>
+  
+
+</body>

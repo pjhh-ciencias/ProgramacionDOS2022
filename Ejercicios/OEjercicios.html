@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+
+
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams" /* this part is for numbered equations */
+        }
+      };
+    </script>
+
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+        body.number-title{
+          counter-reset: sectionCounter 3 cardCounter ;
+        }
+        h1.number-title{
+          counter-reset: sectionCounter 3 cardCounter ;
+        }
+      </style>
+  
+    <!-- Top Menu  -->
+
+
+    <header class="main-header">
+      <h1> Programación UNO  </h1>
+        <nav class="top-nav">
+          <ul>
+            <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Home.html"> Inicio  </a> </li>
+            <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Informacion_General.html"> Información general </a> </li>
+            <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Notas.html"> Notas  </a> </li>
+            <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Ejercicios.html"> Ejercicios  </a> </li>
+            <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Enlaces_externos.html"> Links </a> </li>
+          </ul>
+        </nav>
+       <!-- 
+        <nav class="small-nav" align=right>
+          <button onclick="myFunction()">Claro/Obscuro 
+        </nav> 
+      -->
+
+      </header>
+
+      <!-- This part is for title in tab-->
+      <title> Ejercicios propuestos ordinario   </title>
+    
+  </head>
+
+
+
+  <body class="fondo-body" >
+    <h1 class="number-title flexbox"> Ejercicios propuestos ordinario </h1>   
+    
+    
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p>
+        <ol>
+          <li>Escribir el pseudocodigo de un algoritmo que solicite al usuario una lista de  $10$ palabras, cada una 
+            de longitud arbitraria. Considerando que el usuario pudo haber introducido por error espacios extras  al principio
+            o al final de cada palabra, primero elimine estos. Luego, imprima las palabras una por línea y finalmente ordene
+            alfabéticamente la lista de palabras e imprima la lista resultante.
+          </li><br>
+          <li>Escribir el pseudocodigo de un algoritmo que solicite al usuario el nombre completo de $10$ estudiantes: Nombre(s), 
+            Apellido paterno y Apellido materno en ese orden. Considerando que el usuario pudo haber introducido por error 
+            espacios extras al principio o al final de cada palabra, primero elimine estos. Luego, imprima 
+            la lista completa y pregunte al usuario como desea ordenarlos: Por Nombre, Apellido paterno, Apellido Materno 
+            y  ordene alfabéticamente segun la respuesta del usuario e imprima la lista resultante.
+            
+          </li>
+        </ol>
+      </p>
+      
+    </div>
+    
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <ol>
+      <li><p><b>Definición:</b> Se dice que un número es <b>cubifinito</b> cuando al elevar todos 
+          sus dígitos al cubo y sumarlos el resultado o bien es $1$ o
+          bien es un número cubifinito.
+          </p>
+          <p>Por ejemplo, el número $1243$ es cubifinito, pues al elevar todos sus dígitos al cubo obtenemos $100$ que es cubifinito.        
+            Por su parte, el número $513$ no es cubifinito, pues al elevar al cubo sus dígitos conseguimos el $153$ que nunca podrá 
+            ser cubifinito, pues la suma de los cubos de sus dígitos vuelve a dar $153$.
+          </p>
+
+          <p>
+            <ol>
+              <li>Escribir el pseudocodigo de un algoritmo que solicite al usuario un número entero positivo, y determine e 
+            imprima si éste es o no un número  cubifinito.</li><br>
+            <li>Escribir el pseudocodigo de un algoritmo que imprima los primeros $10$ números cubifinitos.</li>
+            </ol>
+        </p>
+      </li>
+       <hr>
+      <li>
+          <p><b>Definición:</b> Se dice que dos palabras son <b>anagramas</b> si tienen las mismas letras pero en otro orden.</p>
+          
+          <p>Por ejemplo: <em>sergio</em> y <em>riesgo</em> son anagramas, mientras que <em>aparta</em> y <em>raptar</em>
+            no lo son, ya que «raptar» tiene una r de más y una a de menos. Diseñe un
+            programa que indique si un par de palabras suministradas como datos son
+            anagramas.
+          </p>
+          <p>Escribir el pseudocodigo de un algoritmo que solicite al usuario una palabra  e indique si 
+            es pentavocálica o no.</p>
+      </li>
+      </ol>
+      
+      
+    </div>
+
+    
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <ol>
+      <li><p>Escribir el pseudocodigo de un algoritmo que lea una linea de texto de longitud arbitraria y realice lo siguiente:
+          <ol>
+            <li>Sustituir todaslas secuencias de dos o más espacios por un sólo espacio e imprimir la linea de texto resultante.</li><br>
+            <li>Imprimir cada palabra dentro de la frase en una columna, seguido del número de letras que compone dicha palabra.</li><br>
+            <li>Contar el número de palabras con exactamente cuatro letras</li><br>
+            <li>Sustituir cada palabra de cuatro letras por una cadena de cuatro asteriscos e imprimir la nueva cadena.</li>
+          </ol>
+          </p>
+      </li>
+      <hr>
+      
+      <li>
+          <p><b>Definición:</b> Se dice que una palabra es <b>pentavocálica</b> cuando está dotada de las cinco
+          vocales sin repetición.</p>
+          <p>Por ejemplo: murciélago, refugiado, abuelito, hipotenusa, cuadernillo, descuidado, educación,... son palabras 
+            pentavolicas
+          </p>
+          <p>Escribir el pseudocodigo de un algoritmo que solicite al usuario una palabra  e indique si  es pentavocálica o no.</p>
+      </li>
+      </ol>
+    </div>
+
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p>Escribir el pseudocodigo de un algoritmo que codifique mensajes de la siguiente manera: sustituye cada una de las letras
+        del mensaje original  por la letra que se encuentra a un número fijo (elegir este número de forma aleatoria
+        de entre $-27$ y $27$) de posiciones  en el alfabeto.
+      </p>
+      <p>Así, si utilizamos un desplazamiento de $2$, las apariciones de la letra 'a' se sustituyen por la 'c', 
+        todas las apariciones de la 'b' por 'd', etc. Cuando se llegue al final del alfabeto, se comienza de nuevo de forma que con el desplazamiento de $2$, 
+        la 'y' se sustituye por la 'a' y la 'z' se sustituye por la 'b'. Mientras que se  obtiene un desplazamiento negativo, 
+        por ejemplo si utilizamos un desplazamiento de -1, la 'e' se convertirá en 'd', mientras que la 'a' pasará a ser 'z'.
+      </p>
+
+      <p> No se  codificaran los caracteres que no sean letras del alfabeto:
+        $$\mathrm{a,b,c,d,e,f,g,h,i,j,k,l,m,ñ,o,p,q,r,s,t,u,v,w,x,y,z}$$
+        De esta manera, los espacios o los símbolos de puntuación no sufrirán cambio alguno.
+      </p>
+    </div>
+        
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p><b>Definición:</b> Los <b>puntos de silla</b> de una matriz son aquellos elementos de la matriz 
+        que cumplen que son menores o iguales que el resto de elementos de su fila y mayores o iguales que el resto
+        de elementos de su columna, o al revés, mayores o iguales que el resto de elementos de su fila 
+        y menores o iguales que el resto de elementos de su columna.
+      </p>
+
+      <p>Escribir el pseudocodigo de un algoritmo que genere una matriz cuadrada de tamaño $10 \times 10$ con números 
+        aleatorios entre 1 y 9, siguiendo el siguiente criterio: Las entradas de la matriz se llenarán con números acordes 
+        a la posición en la que se encuentren: en la entrada $i,j$ de la matriz se debe  colocar un número impar $(1,3,5,\ldots)$ 
+        si $i+j$ es un número impar mientras que se debe colocar un  número par $(0,2,4,\ldots)$ si la suma  $i+j$ 
+        resulta ser un número par. Luego, imprimir la matriz obtenida y realizar lo siguiente:
+      </p>
+      <p>
+        <ol>
+        <li>Crear un vector que almacene el máximo elemento de cada columna de la matriz. 
+          Imprimir la posicion en la que se encuentre e imprimir  el vector.</li><br>
+        <li>Crear un vector que almacene el máximo elemento de cada fila de la matriz.
+          Imprimir la posicion en la que se encuentre e imprimir  el vector.</li><br>
+        <li>Imprimir el  valor máximo almacenado en toda la matriz e imprimir las posiciones en las que se encuentra.</li><br>
+        <li>Encuentre e imprima todos los puntos sillas de la matriz.</li>
+
+
+      </ol>
+      </p>
+    </div>
+
+
+
+
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p>Escribir el pseudocodigo de un algoritmo que genere de forma aleatoria un tablero (matriz) de
+        buscaminas de tamaño $20\times 20$ totalmente descubierto. La distribución de las minas
+        debe ser realizada de la siguiente manera.
+        <ul>
+          <li>Para cada fila $i=0,\ldots, 19$, realiza lo siguiente:<br><br>
+
+            <ul>          
+              <li>Genera un número aleatorio $n_{i}$ entre: $0$ y $19$</li><br>
+              <li>Luego, genera $n_{i}$  números aleatorios sin repetición de entre 
+                $0$ y $19$, y coloca  una mina (representa a una mina mediante un  $\ast$) en estas entradas de la fila $i$ de la matriz.</li>
+            </ul> 
+          </li>
+        </ul>
+      </p>
+      
+      <p>Luego,  imprime la matriz obtenida e imprime  cuántas y cuales celdas  vacías tienen al menos $5$
+        minas a su alrededor.
+      </p>
+    </div>
+
+    
+
+    
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p><b>El cuadrado de Rubik:</b> En esencia, es similar al cubo, pero con sólo una cara.
+        Los desplazamientos de los cuadrados se pueden realizar por filas o por columnas. Así,
+        por ejemplo, si se desplaza una fila hacia la derecha, todos sus cuadrados avanzan 
+        una posición, y el cuadrado que estaba situado más a la derecha reaparece en el lado izquierdo.
+        <div class="flexbox">  
+          <img src="../Imagenes/Cuadrado_rubik.jpg" alt="", width="40%" height="auto">
+        </div>
+      </p>
+      <ol>
+        <li>Escribir el pseudocodigo de un algoritmo que genere e imprima una matriz de tamaño $3 \times 3$ que 
+        represente el cuadrado de Rubik  en su estado inicial  utilizar la letra $\mathrm{Y}$ para 
+        denotar el color amarillo, $\mathrm{R}$ para denotar el color rojo y $\mathrm{B}$ para
+        denotar el color azul. El estado inicial del cuadrado de Rubik tiene que generarse de
+        forma aleatoria, i.e. obtener de forma aleatoria cual de entre los tres colores será
+        el color de la primera columna, luego de entre los dos restantes será el color de la segunda columna, 
+        finalmente el color de la tercer columna queda completamente definido.
+      </li><br>
+      <li>Generar un número aleatorio  $n$ de entre $1$ y $10$ </li><br>
+      <li>Luego, generar $n$ operaciones de forma aleatoria: $\mathrm{L} \to k$ donde $\mathrm{L}$ es una letra $k$ un numero entero. 
+          <p>Cada operación está compuesta de dos partes: una letra indicando si el movimiento 
+            es sobre una fila ("f") o una columna ("c"), y un número entero $k\in \{ -3,-2,-1,1,2,3\}$,
+            indicando la fila o la columna sobre la que se realiza la operación: Si el número $k$ es positivo,
+            el desplazamiento será hacia la derecha (en el caso de las filas) o hacia abajo (en el caso de 
+            las columnas), en cambio si $k$ es negativo el desplazimiento será hacia la izquierda o hacia arriba.
+          </p>
+      </li>
+      <li>Despues de generar aleatoriamente una operación imprimir esta:  $\mathrm{L} \to k$ e  imprimir
+        tambien el cuadrado de Rubik obtenido despues de aplicar la operación.
+      </li>
+      </ol>    
+      </p>
+    </div>
+
+    
+    
+    <div class="ejercicio-box"><h2 class="number-title"> Ejercicio</h2>
+      <p>Escribir el pseudocodigo de un algoritmo que genere e imprima una matriz de tamaño $3 \times 3$, 
+        cuyas entradas son números enteros positivos entre $0$ y $9$ obtenidos de forma aleatoria.
+      </p>
+      <p>Sólo se tienen permitido los siguientes movimientos posibles:
+        <ol>
+          <li>Mover la columna de más a la izquierda a la derecha del todo, desplazando el resto de columnas
+            una posición hacia la izquierda,
+          </li><br>
+          <li>Mover la columna de la derecha a la izquierda (movimiento contrario al anterior),</li><br>
+          <li>Mover la fila superior a la parte inferior del tablero,</li><br>
+          <li>Mover la fila inferior a la parte superior (movimiento opuesto).</li><br>
+        </ol>
+      </p>
+      <p>Imprime los movimientos que tienen que realizar sobre la matriz para conseguir que
+        la diagonal principal (la que va de arriba a la izquierda a abajo a la derecha) sea
+        estrictamente creciente. No siempre es posible alcanzar tal configuración, en este caso imprimir IMPOSIBLE. </p>
+    </div>
+
+</body>

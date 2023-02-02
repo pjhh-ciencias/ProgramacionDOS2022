@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC >
+<html lang="es">
+
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams" /* this part is for numbered equations */
+        }
+      };
+    </script>
+
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+        body.number-title{
+          counter-reset: sectionCounter 13 cardCounter ;
+        }
+        h1.number-title{
+          counter-reset: sectionCounter 13 cardCounter ;
+        }
+      </style>
+  
+
+    <!-- Top Menu  -->
+
+
+    <header class="main-header">
+        <h1> Programación UNO</h1>
+        <nav class="top-nav">
+          <ul>
+            <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Home.html"> Inicio  </a> </li>
+          <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Informacion_General.html"> Información general </a> </li>
+          <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Notas.html"> Notas </a> </li>
+          <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Ejercicios.html"> Ejercicios </a> </li>
+          <li> <a href="https://pjhh-ciencias.github.io/ProgramacionUNO/Enlaces_externos.html"> Links </a> </li>
+          </ul>
+        </nav>
+
+      <!-- 
+        <nav class="small-nav" align=right>
+          <button onclick="myFunction()">Claro/Obscuro 
+        </nav> 
+      -->
+
+      </header>
+
+      <!-- This part is for title in tab-->
+      <title> Semana 14   </title>
+    
+  </head>
+
+
+
+  <body class="fondo-body" >
+    
+    <h1 class="number-title flexbox"> Semana 14 </h1>   
+
+    <h1 class="title flexbox_"></h1>
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Generar aleatoriamente $10$ números enteros entre $0$ y $100$, almacenarlos en un vector.
+        Escribir el pseudocodigo de un algoritmo que solicite al usuario entre un número 
+        entre $0$ y $100$, luego  busque e indique si el número se encuentra y todas las posiciones
+        en las que se encuentra.
+      </p>
+      <button class="respButton hvr-grow ">  Solución       </button>
+    <div class="resp-box flexbox">
+      <div class="flexbox">  
+        <a href="../Ejercicios/Practica14_1.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Generar aleatoriamente $10$ números enteros entre $0$ y $100$, almacenarlos en un vector.
+        Escribir el pseudocodigo de un algoritmo que imprima el contenido del vector que se encuentra en 
+        las posiciones cuyos indices sean números pares, imprima tambien la suma de estos.
+      </p>
+      <button class="respButton hvr-grow ">  Solución       </button>
+    <div class="resp-box flexbox">
+      <div class="flexbox">  
+        <a href="../Ejercicios/Practica14_2.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+      </div>
+    </div>
+    </div>
+    
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Generar aleatoriamente $10$ números enteros entre  $0$ y $100$, almacenarlos en un vector.
+        Escribir el pseudocodigo de un algoritmo que ordene los números en el vector.
+      </p>
+      <button class="respButton hvr-grow ">  Solución       </button>
+      <div class="resp-box flexbox">
+        <div class="flexbox">  
+          <a href="../Ejercicios/Practica14_3.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Generar aleatoriamente $10$ números enteros entre  $0$ y $100$, almacenarlos en un vector.
+        Escribir el pseudocodigo de un algoritmo que imprima únicamente  los elementos únicos del vector.
+      </p>
+      <button class="respButton hvr-grow ">  Solución       </button>
+      <div class="resp-box flexbox">
+        <div class="flexbox">  
+          <a href="../Ejercicios/Practica14_4_.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Escribir el pseudocodigo de un algoritmo que genere aleatoriamente  $10$ números enteros entre  $0$ y $100$ <b>sin repetición</b> y 
+        almacene estos en un vector. Imprimir el vector.
+      </p>
+      <button class="respButton hvr-grow ">  Solución       </button>
+      <div class="resp-box flexbox">
+        <div class="flexbox">  
+          <a href="../Ejercicios/Practica14_5.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+        </div>
+      </div>
+    </div>
+    
+    <h1 class="title flexbox_"> Matrices</h1>
+
+    <div class="nota-box"><h2 class="number-title"> Introducción</h2>
+      <p>
+        Una <b>matriz</b> $M$ de tamaño $m \times n$ es un conjunto <b>finito</b> y <b>homogeneo</b> de datos,
+        es decir, del <b>mismo tipo de dato</b> que  se almacenan 
+        bajo un mismo nombre, y se diferencian por la posición que tiene cada elemento dentro del arreglo
+        el cual tiene forma rectangular o cuadrada. Una matriz de tamaño $m \times n$ tiene $m$ filas y $n$ 
+        columnas. 
+      </p>
+      
+      <p>
+        Para cada $0\leq i \leq n-1 $ y $0\leq j \leq m-1$, el elemento $M(i,j)$ hace referencia
+        a el  elemento de la matriz que se encuentra en la fila $i-1$ y  columna $j-1$. 
+       </p>
+
+      
+    </div>
+
+    <div class="nota-box"><h2 class="number-title"> Observación </h2>
+
+      <p>
+        Un matriz de tamaño $3\times 5$ se representa gráficamente como:
+        
+        <p>
+          <center>
+          <table style="width:40%">
+            <thead>
+            </thead>
+            <tbody>
+            <tr>
+                <tr>
+                  <th>$M(0,0)$</th>
+                  <th>$M(0,1)$</th>
+                  <th>$M(0,2)$</th>
+                  <th>$M(0,3)$</th>
+                  <th>$M(0,4)$</th>
+                </tr>
+              </tr>
+              <tr>
+                <th>$M(1,0)$</th>
+                <th>$M(1,1)$</th>
+                <th>$M(1,2)$</th>
+                <th>$M(1,3)$</th>
+                <th>$M(1,4)$</th>
+              </tr>
+              <tr>
+                <th>$M(2,0)$</th>
+                <th>$M(2,1)$</th>
+                <th>$M(2,2)$</th>
+                <th>$M(2,3)$</th>
+                <th>$M(2,4)$</th>
+                
+              </tr>
+           </tbody>
+        </table>
+        </center>
+        </p>
+
+       
+    </div>
+
+    <div class="nota-box"><h2 class="number-title"> Sintaxis </h2>
+
+
+      <p>
+        En PsEint para <b>declarar una matriz</b> utilizamos las palabras reservadas
+        <code>Definir</code> y <code>Dimension</code>. Por ejemplo, para definir (crear)
+        un matriz $M$ de tamaño $2\times 3$ de enteros  y  almacenar ahí seis números enteros 
+        utilizamos las siguientes instrucciones:
+      </pre>
+
+      <p>
+        <div class="flexbox">  
+          <img src="../Imagenes/matriz_codigo.jpg" alt="", width="50%" height="auto">
+        </div>
+      </p>
+
+      <button class="respButton hvr-grow ">  Código </button>
+      <div class="resp-box flexbox">
+        <div class="flexbox">  
+          <a href="../Ejercicios/Matriz.psc" target="_blank"> <font size="4"> <b> Descargar</b></font></a>
+        </div>
+      </div>
+    </div>
+  
+
+<!--
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+      <p>Generar aleatoriamente $10$ números enteros entre  $0$ y $100$, almacenarlos en un vector.
+        Escribir el pseudocodigo de un algoritmo que ordene los números en el vector.
+      </p>
+    </div>
+
+
+
+    <div class="ejercicio-box"><h2 class="number-title"> Práctica</h2>
+    <p>Generar aleatoriamente $5$ números enteros entre  $0$ y $100$,  almacenarlos en un vector.
+      Escribir el pseudocodigo de un algoritmo que calcule lo siguiente:
+      <ol>
+        <li>La <b>media aritmética</b>. Ésta se calcula como la suma de los elementos entre
+          el número de elementos.
+        </li>
+        <li>La <b>varianza</b>. Ésta se calcula como la suma de los cuadrados de las desviaciones
+          de la media, entre el número de elementos.
+        </li>
+        <li>La <b>desviación estándar</b>. Se calcula como la raíz cuadrada de la varianza.</li>
+        <li>La <b>moda</b>. Se calcula obteniendo el número con mayor frecuencia.</li>
+      </ol>
+    </p>
+    </div>
+
+   -->
+
+  </body>
