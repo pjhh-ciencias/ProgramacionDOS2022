@@ -3,7 +3,7 @@ import turtle
 turtle.shape("turtle") #Tortuga
 
 turtle.color("blue")
-turtle.speed('normal')
+turtle.speed('fast')
 
 for j in range(10):
     turtle.right(36)

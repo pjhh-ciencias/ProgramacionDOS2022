@@ -11,7 +11,7 @@ turtle.shape("turtle") #Tortuga
 #-----------------------------------------------------------------
 #              Definiendo color de puntero y de trazo
 #-----------------------------------------------------------------
-turtle.color("green","blue")
+turtle.color("black","blue")
 
 #-----------------------------------------------------------------
 #                           Movimientos
@@ -37,7 +37,7 @@ turtle.right(90)
 turtle.forward(100)
 
 
-turtle.onclick(None)
+#turtle.onclick(None)
 
 #-----------------------------------------------------------------
 #                       Formas rellenas
