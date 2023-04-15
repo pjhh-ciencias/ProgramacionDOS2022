@@ -42,3 +42,12 @@ $(document).ready(function() {
     };
     };
   
+
+    const inputElement = document.getElementById("fileToUpload");
+
+inputElement.addEventListener("change", () => {
+  const fileName = inputElement.files[0].name;
+  const info = document.createElement("p");
+  info.textContent = `Archivo seleccionado: ${fileName}`;
+  document.body.appendChild(info);
+});
